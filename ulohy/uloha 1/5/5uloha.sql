@@ -1,1 +1,1 @@
-SELECT products.product_name, sum(orders.sales) AS celkova_hodnota FROM products LEFT JOIN orders ON products.product_id = orders.product_id
+SELECT products.product_name, sum(orders.sales) AS celkova_hodnota FROM products LEFT JOIN orders ON products.product_id = orders.product_id GROUP BY products.product_name ORDER BY sum(orders.sales) DESC;
