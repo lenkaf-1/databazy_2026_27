@@ -1,0 +1,1 @@
+SELECT customers.customer_name, sum(orders.sales) as hodnota_nakupov FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.customer_name HAVING sum(orders.sales) > 2000
