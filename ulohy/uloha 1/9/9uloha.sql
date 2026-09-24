@@ -1,0 +1,1 @@
+SELECT products.category, avg(orders.discount) as priemerna_zlava from products INNER JOIN orders ON products.product_id = orders.product_id GROUP BY products.category ORDER BY avg(orders.discount)
