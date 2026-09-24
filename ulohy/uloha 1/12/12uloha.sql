@@ -1,0 +1,1 @@
+SELECT customers.region, count(case when orders.sales >1000 then 1 end) as high_value, count(case when orders.sales <=1000 then 1 end) as low_value FROM orders INNER JOIN customers on orders.customer_id = customers.customer_id GROUP BY customers.region ORDER BY customers.region
