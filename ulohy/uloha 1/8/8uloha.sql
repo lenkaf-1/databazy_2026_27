@@ -1,0 +1,1 @@
+SELECT customers.customer_name, count(orders.order_id) as pocet_objednavok FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.customer_name order by count(orders.order_id) DESC;
