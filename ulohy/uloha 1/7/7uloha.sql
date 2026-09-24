@@ -1,0 +1,1 @@
+SELECT customers.region, sum(orders.sales) AS celkova_hodnota FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.region ORDER BY sum(orders.sales) 
