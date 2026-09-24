@@ -1,0 +1,1 @@
+SELECT customers.region, sum(orders.sales) as celkova_hodnota, avg(orders.discount) as priemer_zlava, count(orders.order_id) as pocet_objednavok from orders INNER JOIN customers ON orders.customer_id = customers.customer_id GROUP BY customers.region 
