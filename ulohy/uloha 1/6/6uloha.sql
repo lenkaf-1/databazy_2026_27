@@ -1,0 +1,1 @@
+SELECT customers.customer_name, orders.order_id, orders.sales FROM customers FULL OUTER JOIN orders ON customers.customer_id = orders.customer_id ORDER BY customer_name, order_id;
