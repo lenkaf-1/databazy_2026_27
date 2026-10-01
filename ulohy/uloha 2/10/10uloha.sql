@@ -1,0 +1,1 @@
+SELECT f.product_name, f.sale_date, f.total_amount from flourmills_sales f where exists(select 1 from flourmills_sales f2 where f2.product_name = f.product_name group by f2.product_name having count(distinct extract(month from f2.sale_date))>1)
