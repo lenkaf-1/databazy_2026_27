@@ -1,0 +1,1 @@
+select distinct f.product_category from flourmills_sales f where not exists (select 1 from flourmills_sales f2 where f2.product_category = f.product_category and f2.total_amount > 500000)
