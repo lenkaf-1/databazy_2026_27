@@ -1,0 +1,1 @@
+select f.product_name, f.region, f.sale_date, f.total_amount from flourmills_sales f where exists (select 1 from flourmills_sales f2 where f2.region = f.region and extract(year from f2.sale_date) = 2024)
