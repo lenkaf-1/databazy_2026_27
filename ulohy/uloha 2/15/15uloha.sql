@@ -1,0 +1,1 @@
+select distinct f.region from flourmills_sales f where not exists (select 1 from flourmills_sales f2 where f2.region = f.region and f2.product_category = 'Flour')
