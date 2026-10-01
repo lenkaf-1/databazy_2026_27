@@ -1,0 +1,1 @@
+SELECT f.product_name, f.product_category, f.total_amount from flourmills_sales f where f.total_amount > (select avg(f2.total_amount) from flourmills_sales f2 where f2.product_category = f.product_category)
