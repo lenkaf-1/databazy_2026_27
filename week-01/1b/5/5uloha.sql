@@ -1,0 +1,1 @@
+SELECT product_name, total_amount, total_amount / (SELECT sum(total_amount) from flourmills_sales) as amount_share from flourmills_sales order by sales_id asc
