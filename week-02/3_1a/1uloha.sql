@@ -1,0 +1,1 @@
+CREATE VIEW high_value_customers AS SELECT customers.customer_id, customers.customer_name, sum(orders.sales) as total_sales FROM customers inner join orders on customers.customer_id = orders.customer_id GROUP BY customers.customer_id, customers.customer_name HAVING sum(orders.sales) > 2000
